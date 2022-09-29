@@ -7,19 +7,19 @@ img {
   width: 100%;
 }
 a {
-  color: #ff7f50;
+  color: #6FD6BE;
   text-decoration: none; /* No underlining */
 }
 a:hover,
 a:focus {
-  color: #cc6540;
+  color: ##1D6351;
   text-decoration: underline;
 }
 a:visited { /* visited link */
-  color: #ff7f50;
+  color: #FECB33;
 }
 a:active { /* selected link */
-  color: #994c30;
+  color: #6F5401;
 }
 body {
   background-color: #ffffff;
@@ -50,4 +50,14 @@ h3 {
 h4 {
   font-size: 1.35em;
   font-weight: 400;
+}
+.button {
+  display: inline-block;
+  background-color: #6FD6BE;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #6FD6BE;
+  transition: 0.2s opacity;
 }
