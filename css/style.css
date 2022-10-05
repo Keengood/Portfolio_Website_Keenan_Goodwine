@@ -71,7 +71,11 @@ h4 {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #6FD6BE;
+  transition-duration: 0.2s;
   transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8;
 }
 /* Layout styling */
 .container {
@@ -113,6 +117,28 @@ nav > ul > li > a {
 main {
   padding-top: 30px;
 }
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -138,6 +164,11 @@ Medium devices (640px and larger)
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 /* ==============================
 X-large devices (1440px or larger)
