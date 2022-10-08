@@ -20,7 +20,7 @@ img {
 }
 a {
   color: #6FD6BE;
-  text-decoration: none; /* No underlining */
+  text-decoration: none;
 }
 a:hover,
 a:focus {
@@ -53,6 +53,7 @@ h1 {
 h2 {
   font-size: 2.25em;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
@@ -80,17 +81,23 @@ h4 {
 /* Layout styling */
 .container {
   padding: 0 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.row {
+.row::after {
   margin: 25px 0;
+  content: "";
+  clear: both;
+  display: table;
+}
+.vertical-center {
+margin: 0 auto
+}
 }
 }
 #work .row {
   padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
-}
-}
-#hero {
-  text-align: center;
 }
 .logo {
   max-width: 250px;
@@ -109,6 +116,7 @@ nav > ul > li > a {
   color: #4a4a4a;
 }
 #hero {
+  text-align: center;
   background-color: #ffffff;
   padding: 20px 0;
   display: inline-block;
@@ -159,7 +167,13 @@ Medium devices (640px and larger)
 }
 [class*="col-"] {
   float: left;
+  padding: 0 10px;
 }
+.column {
+  float: left;
+  width: 50%;
+}
+#about-page h3 { margin-top: 0;}
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
